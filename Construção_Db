@@ -1,0 +1,33 @@
+docker run --name mongo -p 27017:27017 -d mongo 
+entrar no docker
+-> mongo
+-> use admin
+-> db.createUser({user:"admin", pwd:"123456", roles: [{ role:"userAdminAnyDatabase", db: "admin" }]})
+Ver qual algoritmo de cript vem por padrão, provavelmente é SCRAM-SHA256
+
+
+
+{
+	"_id" : "admin.admin",
+	"userId" : UUID("aa7c29c4-3c58-40c2-bf6d-1302a2d065f2"),
+	"user" : "admin",
+	"db" : "admin",
+	"roles" : [
+		{
+			"role" : "userAdminAnyDatabase",
+			"db" : "admin"
+		},
+		{
+			"role" : "dbAdminAnyDatabase",
+			"db" : "admin"
+		},
+		{
+			"role" : "readWriteAnyDatabase",
+			"db" : "admin"
+		}
+	],
+	"mechanisms" : [
+		"SCRAM-SHA-1",
+		"SCRAM-SHA-256"
+	]
+}

@@ -1,0 +1,36 @@
+Felipe da Silva Pires
+Fpires.92@gmail.com
+Whatsapp: 17-99724-8540
+
+
+Utilizei modelo MVC pois creio que para um teste de demonstração de código, é a maneira mais básica de demonstrar qual sei programar, além de ficar relativamente natural
+o fluxo da aplicação para quem está analisando.
+
+O MondoDb cria suas tabela a partir do uso do Schema que está definido no próprio código.
+Ia fazer um Docker-composer, porém, acabei demorando mais tempo para terminar o código que eu imaginei, então, acabou ficando para trás.
+
+Estou supondo que todos os dados vão vir em formato JSON, logo, as datas vem em formato de String e tem de vir já formatadas do front-end.
+Caso contrário, tem um util nos respectivos controllers que checam se veio em formato de data (DD/MM/YYYY).
+
+os updates no DB tão com new Date() neles.
+Tentei também criar classes para o express Router, porém, vi que seria necessário importação de uma interface de modo que iria me atrasar mais que já estava,
+porém, ai seria uma questão de ter mais tempo.
+
+Tive problemas com relação ao model dos Comments ao acopla-los a um vídeo, logo, a parte dos comentários ficou sem a parte de deletar e sem envia-los ao front, mas ai devem ter
+diversas maneiras de fazer isto, provavelmente vendo por data, caso seja pra colocar a opção mais porca possível.
+Como acabei perdendo muito tempo com relação as tentativas de fazer a rota de deletar funcionar (umas 4 ou 5h), também não trabalhei a lógica a respeito dos testes.
+Já deixo de aviso para o Senhor, que nunca trabalhei na implementação de testes no meu antigo emprego, logo, esse é uma parte qual não tenho muito conhecimento.
+Enfim, de qualquer maneira, estou Enviando para o senhor, não foi o melhor teste qual eu fiz na minha vida, mas foi o que consegui fazer nos 3 dias e meio quais tive.
+
+Sobre onde fazer deploy, é uma questão que envolve muito quão grande é a aplicação.
+Mas eu creio que para início de aplicação um Amazon EC2 seja o mais viável pois você pode desalocar servidores ao longo de períodos de pouco tráfego, e mais fácil de dinamiza-los.
+Por fim, teoricamente seria necessário uma implementação de serviço de fila, utilizando protocolo AMQP para comunicação com o respectivo banco de dados,
+dado que é uma plataforma de jogos, logo, a ordenação é algo que importa, mesmo que se troque por um pouco mais de delay (talvez 5ms)
+Também seria necessário utilizar Nginx, Redis como cache e persistência de dados (Também pode ser usado como serviço de mensageria) e um PM2 para fazer load balancer dos servicos.
+
+Agradeço MUITO pela oportunidade.
+
+
+
+Para compilar, TSC na pasta raiz.
+NPM Start para simplesmente rodar em teste, utilizando nodemon.

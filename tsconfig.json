@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "__dist/js",
+    "target": "ES6",
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "typeRoots": ["./node_modules/@types"],
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node"
+  },
+  "include": ["api/**/*", "api/server.ts"],
+  "files": ["./types.d.ts", "./api/utils/checkIfDate.ts"]
+}
